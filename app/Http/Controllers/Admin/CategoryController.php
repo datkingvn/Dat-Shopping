@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Category;
+use App\Models\Subcategory;
 use Illuminate\Http\Request;
 
 class CategoryController extends Controller
@@ -38,15 +39,16 @@ class CategoryController extends Controller
     }
 
     public function UpdateCategory(Request $request){
-        $category_id = $request->category_id;
 
         $request->validate([
             'category_name' => 'required|unique:categories'
         ]);
 
-        Category::findOrFail($category_id)->update([
+        $category_id = $request->category_id;
+
+        category::findOrFail($category_id)->update([
             'category_name' => $request->category_name,
-            'slug' => strtolower(str_replace(' ', '-', $request->category_name))
+            'slug' => strtolower(str_replace(' ', '-', $request->category_name)),
         ]);
 
         return redirect()->route('allcategory')->with('message', 'Category Updated Successfully!');
@@ -57,4 +59,5 @@ class CategoryController extends Controller
 
         return redirect()->route('allcategory')->with('message', 'Category Deleted Successfully!');
     }
+
 }

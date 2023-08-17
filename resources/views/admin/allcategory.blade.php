@@ -37,19 +37,19 @@
                             </tr>
                             </thead>
                             <tbody>
-        {{--  mỗi phần tử trong mảng $categories được gán cho biến $category trong mỗi lần lặp--}}
+                            {{--  mỗi phần tử trong mảng $categories được gán cho biến $category trong mỗi lần lặp--}}
                             @foreach($categories as $category)
 
-                            <tr>
-                                <td>{{ $category->id }}</td>
-                                <td>{{ $category->category_name }}</td>
-                                <td>{{ $category->subcategory_count }}</td>
-                                <td>{{ $category->product_count }}</td>
-                                <td>
-                                    <a href="{{ route('editcategory', $category->id) }}" class="btn btn-primary">Edit</a>
-                                    <a href="{{ route('deletecategory', $category->id) }}" class="btn btn-danger">Delete</a>
-                                </td>
-                            </tr>
+                                <tr>
+                                    <td>{{ $category->id }}</td>
+                                    <td>{{ $category->category_name }}</td>
+                                    <td>{{ $category->subcategory_count }}</td>
+                                    <td>{{ $category->product_count }}</td>
+                                    <td>
+                                        <a href="{{ route('editcategory', $category->id) }}" class="btn btn-primary">Edit</a>
+                                        <a href="{{ route('deletecategory', $category->id) }}" class="btn btn-danger">Delete</a>
+                                    </td>
+                                </tr>
 
                             @endforeach
                             </tbody>
