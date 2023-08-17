@@ -36,19 +36,24 @@ Admin - All Products
                           <th>Actions</th>
                         </tr>
                       </thead>
-                      <tbody>
-                        <tr>
-                        <td>1</td>
-                        <td>Fan</td>
-                        <td></td>
-                        <td>10</td>
-                        <td>100</td>
-                        <td>
-                            <a href="" class="btn btn-primary">Edit</a>
-                            <a href="" class="btn btn-danger">Delete</a>
-                        </td>
-                        </tr>
-                      </tbody>
+                        @foreach($products as $product)
+                            <tbody>
+                            <tr>
+                                <td>{{ $product->id }}</td>
+                                <td>{{ $product->product_name }}</td>
+                                <td>
+                                    <img src="{{ asset($product->product_img) }}" style="height : 100px;" alt="">
+                                    <br>
+                                    <a href="{{ route('editproductimg', $product->id) }}" class="btn btn-primary">Edit</a>
+                                </td>
+                                <td>{{ $product->price }}</td>
+                                <td>
+                                    <a href="{{ route('editproduct', $product->id) }}" class="btn btn-primary">Edit</a>
+                                    <a href="{{ route('deteleproduct', $product->id) }}" class="btn btn-danger">Delete</a>
+                                </td>
+                            </tr>
+                            </tbody>
+                        @endforeach
                     </table>
                   </div>
                 </div>
