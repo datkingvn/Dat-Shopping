@@ -19,6 +19,11 @@ Admin - All Products
               <!-- Bordered Table -->
               <div class="card">
                 <h5 class="card-header">Available All Products Information</h5>
+                  @if(session()->has('message'))
+                      <div class="alert alert-success">
+                          {{ session()->get('message') }}
+                      </div>
+                  @endif
                 <div class="card-body">
                   <div class="table-responsive text-nowrap">
                     <table class="table table-bordered">
