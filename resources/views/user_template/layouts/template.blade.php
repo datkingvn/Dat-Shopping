@@ -49,7 +49,7 @@
                                 <ul class="single-mega cn-col-4">
                                     <li class="title">All Category</li>
                                     @foreach($categories as $category)
-                                        <li><a href="shop.html">{{$category->category_name}}</a></li>
+                                        <li><a href="{{ route('category', [$category->id, $category->slug])}}}">{{$category->category_name}}</a></li>
                                     @endforeach
                                 </ul>
                                 <div class="single-mega cn-col-4">

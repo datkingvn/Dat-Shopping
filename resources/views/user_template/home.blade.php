@@ -98,7 +98,7 @@
                             </div>
                             <!-- Product Description -->
                             <div class="product-description">
-                                <span>topshop</span>
+                                <span>{{ $product->product_category_name }} - {{ $product->product_subcategory_name }}</span>
                                 <a href="single-product-details.html">
                                     <h6>{{ $product->product_name }}</h6>
                                 </a>
