@@ -99,7 +99,7 @@
                             <!-- Product Description -->
                             <div class="product-description">
                                 <span>{{ $product->product_category_name }} - {{ $product->product_subcategory_name }}</span>
-                                <a href="single-product-details.html">
+                                <a href="{{ route('singleproduct', [$product->id, $product->slug]) }}">
                                     <h6>{{ $product->product_name }}</h6>
                                 </a>
                                 <p class="product-price">$ {{ $product->price }}</p>
