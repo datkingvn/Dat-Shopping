@@ -24,7 +24,17 @@
             <!-- Cart & Favourite Box -->
             <div class="cart-fav-box d-flex align-items-center">
                 <!-- Cart -->
-                <button type="submit" name="addtocart" value="5" class="btn essence-btn">Add to cart</button>
+                <form action="{{route('addproducttocart')}}" method="POST">
+                    @csrf
+                    <input type="hidden" value="{{$product->id}}" name="product_id">
+                    <input type="hidden" value="{{$product->price}}" name="price">
+                    <input type="hidden" value="1" name="quantity">
+                    <div class="input-group d-flex align-items-center">
+                        <label for="product_quantity" class="me-2">Quantity: &ensp;</label>
+                        <input id="product_quantity" class="form-control" type="number" min="1" placeholder="1">
+                    </div><br>
+                    <input class="btn essence-btn" type="submit" value="Add to Cart">
+                </form>
             </div>
         </div>
     </section>

@@ -107,9 +107,13 @@
                                 <!-- Hover Content -->
                                 <div class="hover-content">
                                     <!-- Add to Cart -->
-                                    <div class="add-to-cart-btn">
-                                        <a href="#" class="btn essence-btn">Add to Cart</a>
-                                    </div>
+                                    <form action="{{route('addproducttocart')}}" method="POST">
+                                        @csrf
+                                        <input type="hidden" value="{{$product->id}}" name="product_id">
+                                        <input type="hidden" value="{{$product->price}}" name="price">
+                                        <input type="hidden" value="1" name="quantity">
+                                        <input class="btn essence-btn" type="submit" value="Add to Cart">
+                                    </form>
                                 </div>
                             </div>
                         </div>
