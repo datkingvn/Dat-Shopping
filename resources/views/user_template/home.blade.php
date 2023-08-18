@@ -93,7 +93,7 @@
                                 <img src="{{ $product->product_img }}" alt="">
                                 <!-- Favourite -->
                                 <div class="product-favourite">
-                                    <a href="#" class="favme fa fa-heart"></a>
+                                    <a href="{{ route('singleproduct', [$product->id, $product->slug]) }}" class="favme fa fa-eye"></a>
                                 </div>
                             </div>
                             <!-- Product Description -->
