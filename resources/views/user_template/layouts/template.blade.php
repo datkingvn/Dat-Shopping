@@ -1,4 +1,7 @@
-<!DOCTYPE html>
+@php
+    $categories = App\Models\Category::latest()->get();
+@endphp
+    <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -41,10 +44,23 @@
                 <!-- Nav Start -->
                 <div class="classynav">
                     <ul>
-                        <li><a href="#">Shop</a>
+                        <li><a href="#">All Category</a>
+                            <div class="megamenu">
+                                <ul class="single-mega cn-col-4">
+                                    <li class="title">All Category</li>
+                                    @foreach($categories as $category)
+                                        <li><a href="shop.html">{{$category->category_name}}</a></li>
+                                    @endforeach
+                                </ul>
+                                <div class="single-mega cn-col-4">
+                                    <img src="img/bg-img/bg-6.jpg" alt="">
+                                </div>
+                            </div>
+                        </li>
+
                         <li><a href="{{ route('newrelease') }}">New Release</a>
                         <li><a href="{{ route('todaysdeal') }}">Today's Deal</a>
-                        <li><a href="{{ route('customerservice') }}">Customer Service</a>
+                        <li><a href="{{ route('customerservice') }}">CU Service</a>
                     </ul>
                 </div>
                 <!-- Nav End -->
