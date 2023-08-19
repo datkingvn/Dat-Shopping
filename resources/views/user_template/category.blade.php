@@ -6,7 +6,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="section-heading text-center">
-                        <h2>{{ $category->category_name }} - ({{ $category->product_count }})</h2>
+                        <h2>{{ $category->category_name }}</h2>
                     </div>
                 </div>
             </div>

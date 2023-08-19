@@ -32,7 +32,6 @@ Admin - All Sub Category
                           <th>Id</th>
                           <th>Sub Category Name</th>
                           <th>Category</th>
-                          <th>Products</th>
                           <th>Actions</th>
                         </tr>
                       </thead>
@@ -42,7 +41,6 @@ Admin - All Sub Category
                               <td>{{ $subcategory->id }}</td>
                               <td>{{ $subcategory->subcategory_name }}</td>
                               <td>{{ $subcategory->category_name }}</td>
-                              <td>{{ $subcategory->product_count }}</td>
                               <td>
                                   <a href="{{ route('editsubcat', $subcategory->id) }}" class="btn btn-primary">Edit</a>
                                   <a href="{{ route('deletesubcat', $subcategory->id, $subcategory->category_id) }}" class="btn btn-danger">Delete</a>

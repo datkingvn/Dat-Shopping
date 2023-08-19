@@ -21,7 +21,7 @@ Admin - Pending Orders
                         <th>Product ID</th>
                         <th>Quantity</th>
                         <th>Total Pay</th>
-                        <th>Action</th>
+{{--                        <th>Action</th>--}}
                     </tr>
 
                     @foreach($pending_orders as $order)
@@ -37,7 +37,7 @@ Admin - Pending Orders
                             <td>{{$order->product_id}}</td>
                             <td>{{$order->quantity}}</td>
                             <td>{{$order->total_price}}</td>
-                            <td><a href="" class="btn btn-success">Approve Now</a></td>
+{{--                            <td><a href="" class="btn btn-success">Approve Now</a></td>--}}
                         </tr>
                     @endforeach
                 </table>
