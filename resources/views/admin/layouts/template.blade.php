@@ -193,21 +193,9 @@
                     <span class="menu-header-text">ORDERS</span>
                 </li>
                 <li class="menu-item">
-                    <a href="{{ route('pendingorders') }}" class="menu-link">
+                    <a href="{{ route('adminpendingorder') }}" class="menu-link">
                         <i class="menu-icon tf-icons bx bx-message-square"></i>
                         <div data-i18n="Analytics">Pending Orders</div>
-                    </a>
-                </li>
-                <li class="menu-item">
-                    <a href="index.html" class="menu-link">
-                        <i class="menu-icon tf-icons bx bx-message-square-dots"></i>
-                        <div data-i18n="Analytics">Completed Orders</div>
-                    </a>
-                </li>
-                <li class="menu-item">
-                    <a href="index.html" class="menu-link">
-                        <i class="menu-icon tf-icons bx bx-notepad"></i>
-                        <div data-i18n="Analytics">Cancel Orders</div>
                     </a>
                 </li>
             </ul>
